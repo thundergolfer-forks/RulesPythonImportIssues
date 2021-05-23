@@ -1,7 +1,4 @@
-# The Workspace file for the Crestone project. It currently makes use of only
-# the Python rules: https://github.com/bazelbuild/rules_python
-
-workspace(name = "Crestone")
+workspace(name = "RulesPythonImportIssues")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -14,7 +11,7 @@ http_archive(
 
 load("@rules_python//python:pip.bzl", "pip_install")
 pip_install(
-    requirements = "//crestone:requirements.txt",
+    requirements = "//:requirements.txt",
 )
 
 # Subpar allows creation of self-hosting Python executables:

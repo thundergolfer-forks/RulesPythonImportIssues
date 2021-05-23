@@ -5,8 +5,6 @@ import os
 
 from absl import flags
 from absl.testing import absltest
-from crestone.gcp import dataflow
-from crestone.testing import gcp_responses
 from unittest import mock
 from urllib import error
 
